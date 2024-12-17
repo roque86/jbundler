@@ -1,8 +1,8 @@
 #-*- mode: ruby -*-
 
 Gem::Specification.new do |s|
-  s.name = 'jbundler'
-  s.version = '0.9.3'
+  s.name = 'jruby-bundler'
+  s.version = '0.9.5'
 
   s.summary = 'managing jar dependencies'
   s.description = <<-END
