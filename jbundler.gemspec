@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'jruby-bundler'
-  s.version = '0.9.5'
+  s.version = '0.9.6'
 
   s.summary = 'managing jar dependencies'
   s.description = <<-END
@@ -19,6 +19,7 @@ END
   s.license = 'MIT'
 
   s.files += Dir['lib/**/*.rb']
+  s.files << Dir[ 'lib/jbundler/.polyglot.dependency_pom.rb' ]
   s.files += Dir['spec/*.rb']
   s.files += Dir['spec/*/*'].delete_if { |f| f =~ /~$/ }
   s.files += Dir['MIT-LICENSE']
