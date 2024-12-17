@@ -10,8 +10,8 @@ module JBundler
 
     def show_it( debug = false )
       m = Maven::Ruby::Maven.new
-      m.options[ '-f' ] = File.join( File.dirname( __FILE__ ), 
-                                     'dependency_pom.rb' )
+      m.options[ '-f' ] = File.join( File.dirname( __FILE__ ),
+                                     '.polyglot.dependency_pom.rb' )
       m.options[ '-q' ] = nil unless debug
       m.verbose = debug
 
@@ -19,7 +19,7 @@ module JBundler
 
       puts '...'
 
-      tree = File.join( File.expand_path( @config.work_dir ), 
+      tree = File.join( File.expand_path( @config.work_dir ),
                                  'tree.txt' )
       m.property( 'jbundler.outputFile', tree )
 

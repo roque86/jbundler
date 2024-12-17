@@ -1,6 +1,6 @@
 #-*- mode: ruby -*-
 
-eval_pom( File.read( '../../lib/jbundler/dependency_pom.rb' ), 'dependency_pom.rb' )
+eval_pom( File.read( '../../lib/jbundler/.polyglot.dependency_pom.rb' ), '.polyglot.dependency_pom.rb' )
 
 packaging 'pom'
 
@@ -11,7 +11,7 @@ gem 'jbundler', '${jbundler.version}'
 gemfile
 
 phase :test do
-  plugin( 'org.codehaus.mojo:exec-maven-plugin', '1.2', 
+  plugin( 'org.codehaus.mojo:exec-maven-plugin', '1.2',
           :executable => :java,
           :environmentVariables => { 'GEM_HOME' => '${gem.home}',
             'GEM_PATH' => '${gem.home}',
